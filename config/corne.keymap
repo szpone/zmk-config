@@ -19,9 +19,9 @@
                 , <&macro_press &kp LSHFT>
                 , <&macro_press &kp N>
                 ;
-        }
-    }
-}
+        };
+    };
+};
 
 / {
     combos {
