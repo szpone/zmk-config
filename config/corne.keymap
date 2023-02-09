@@ -22,7 +22,6 @@
             bindings = <&kp LCTRL &kp RALT &kp del>;
         };
     };
-};
 / {
         keymap {
                 compatible = "zmk,keymap";
