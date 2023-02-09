@@ -9,22 +9,26 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        private_tab: private_tab {
+            label = "private_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0 1>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp N>
+        }
+    }
+}
+
+/ {
     combos {
         compatible = "zmk,combos";
         combo_func {
             timeout-ms = <50>;
             key-positions = <37 40>;
             bindings = <&tog 3>;
-        };
-        combo_altdel {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp LCTRL &kp RALT &kp DEL>;
-        };
-        combo_privatetab {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp LCTRL &kp LSHFT &kp N>;
         };
     };
 };
@@ -33,6 +37,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                    bindings = <&private_tab>;
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ;  |  '   |
