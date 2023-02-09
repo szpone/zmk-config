@@ -16,6 +16,11 @@
             key-positions = <37 40>;
             bindings = <&tog 3>;
         };
+        combo_altdel {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LCTRL &kp RALT &kp DEL>;
+        };
     };
 };
 / {
