@@ -23,7 +23,7 @@
         };
         combo_privatetab {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <0 1>;
             bindings = <&kp LCTRL &kp LSHFT &kp N>;
         };
     };
