@@ -21,6 +21,11 @@
             key-positions = <22 23>;
             bindings = <&kp LCTRL &kp RALT &kp DEL>;
         };
+        combo_privatetab {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LCTRL &kp LSHFT &kp N>;
+        };
     };
 };
 / {
